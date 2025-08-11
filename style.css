@@ -1,0 +1,131 @@
+/* General Body Styles */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+}
+
+/* Project Grid Styles (index.html) */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    text-decoration: none;
+    color: #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #a0a0a0;
+}
+
+/* Button Styles (neonfy.html) */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Neon Theme for Neonfy Page */
+.neon-theme h1 {
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+}
+
+.neon-theme .btn {
+    border-color: #0fa;
+    color: #0fa;
+    background: transparent;
+    box-shadow: 0 0 10px #0fa, inset 0 0 10px #0fa;
+}
+
+.neon-theme .btn:hover {
+    color: #121212;
+    background-color: #0fa;
+    box-shadow: 0 0 20px #0fa;
+}
+
+.neon-theme .btn.btn-primary {
+    background-color: #0fa;
+    color: #121212;
+    border-color: #0fa;
+    box-shadow: 0 0 15px #0fa;
+}
+
+.neon-theme .btn.btn-primary:hover {
+    background-color: #0c8;
+    box-shadow: 0 0 25px #0fa;
+}
