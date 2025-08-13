@@ -1,0 +1,98 @@
+/* =====================================================
+   MODERN MINIMAL + BLOOM BACKGROUND
+   ===================================================== */
+
+/* Настраиваемые переменные */
+.modern-minimal-bloom {
+    --particle-color: 255, 200, 150; /* RGB значения */
+    --particle-opacity: 0.6;
+    --bloom-intensity: 0.8;
+    --animation-speed: 1; /* Множитель скорости */
+}
+
+/* Основной контейнер с фоном */
+.modern-minimal-bloom {
+    /* Темный градиентный фон */
+    background: radial-gradient(ellipse at bottom, #1B1B2F 0%, #0A0A0F 100%);
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Измените высоту по необходимости */
+    overflow: hidden; /* Скрывает выходящие за границы частицы */
+}
+
+/* Bloom эффект (мягкое свечение) */
+.modern-minimal-bloom::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    /* Теплое оранжево-коричневое свечение */
+    background: radial-gradient(circle,
+        rgba(139, 69, 19, 0.4) 0%,
+        rgba(139, 69, 19, 0.2) 30%,
+        transparent 70%);
+    filter: blur(40px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: bloom-pulse calc(4s / var(--animation-speed)) ease-in-out infinite;
+    pointer-events: none;
+    opacity: var(--bloom-intensity);
+}
+
+/* Анимация пульсации bloom эффекта */
+@keyframes bloom-pulse {
+    0%, 100% {
+        opacity: calc(var(--bloom-intensity) * 0.5);
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: var(--bloom-intensity);
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+/* Базовый стиль для всех частиц */
+.particle {
+    position: absolute;
+    background: rgba(var(--particle-color), var(--particle-opacity));
+    border-radius: 50%;
+    pointer-events: none;
+    animation-name: particle-float;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Анимация плавающих частиц */
+@keyframes particle-float {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) translateX(20px);
+        opacity: 0;
+    }
+}
+
+/* Альтернативная анимация для разнообразия */
+.particle.alt {
+    animation-name: particle-float-alt;
+}
+
+@keyframes particle-float-alt {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-120px) translateX(-15px);
+        opacity: 0;
+    }
+}
