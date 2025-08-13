@@ -219,6 +219,23 @@ p {
     color: #000;
 }
 
+/* Player Home Image Styles (neonfy.html) */
+.player-home-image {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.6s forwards;
+}
+
+.player-home-image img {
+    max-width: 100%;
+    border-radius: 12px;
+    border: 2px solid var(--neon-glow-color);
+    box-shadow: 0 0 25px rgba(0, 255, 170, 0.4), 0 0 10px rgba(0, 255, 170, 0.2);
+}
+
+
 /* Footer Styles */
 .footer {
     background-color: var(--card-color);
