@@ -187,7 +187,7 @@ p {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Neon Theme for Neonfy Page */
+/* Neon Theme for TON 618 Page */
 .neon-theme h1 {
     color: #fff;
     animation: pulse 4s infinite ease-in-out;
@@ -219,7 +219,7 @@ p {
     color: #000;
 }
 
-/* Player Home Image Styles (neonfy.html) */
+/* Player Home Image Styles (Ton618.html) */
 .player-home-image {
     margin-top: 60px;
     display: flex;
