@@ -1,0 +1,48 @@
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+/* --- Tablet (Portrait) --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.8rem; /* Slightly smaller heading */
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        padding: 30px 15px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+}
+
+/* --- Mobile (Portrait) --- */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.2rem; /* Even smaller for mobile */
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%; /* Make buttons full-width */
+        justify-content: center; /* Center icon and text */
+    }
+
+    .player-home-image img {
+        border-width: 1px; /* Thinner border on mobile */
+    }
+}

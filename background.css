@@ -16,8 +16,8 @@
     background: radial-gradient(ellipse at bottom, #1B1B2F 0%, #0A0A0F 100%);
     position: relative;
     width: 100%;
-    height: 100vh; /* Измените высоту по необходимости */
-    overflow: hidden; /* Скрывает выходящие за границы частицы */
+    min-height: 100vh; /* Changed height to min-height */
+    overflow-x: hidden; /* Allow vertical scroll, hide horizontal */
 }
 
 /* Bloom эффект (мягкое свечение) */
